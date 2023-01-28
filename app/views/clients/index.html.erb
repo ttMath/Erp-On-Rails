@@ -1,2 +1,22 @@
-<h1>Clients#index</h1>
-<p>Find me in app/views/clients/index.html.erb</p>
+<%= stylesheet_link_tag 'clients', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<h1>Clients</h1>
+
+<table>
+    <thead>
+        <tr>
+        <th class=>name</th>
+        <th>email</th>
+        <th>phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @client.each do |c| %>
+            <tr>
+                <td><%= c.name %></td>
+                <td><%= c.email %></td>
+                <td><%= c.phone %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
