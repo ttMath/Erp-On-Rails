@@ -5,17 +5,19 @@
 <table>
     <thead>
         <tr>
-        <th class=>name</th>
-        <th>email</th>
-        <th>phone</th>
+        <th class="table-border">id</th>
+        <th class="table-border">name</th>
+        <th class="table-border">email</th>
+        <th class="table-border">phone</th>
         </tr>
     </thead>
     <tbody>
         <% @client.each do |c| %>
             <tr>
-                <td><%= c.name %></td>
-                <td><%= c.email %></td>
-                <td><%= c.phone %></td>
+                <td class="table-border"><%= c.id %></td>
+                <td class="table-border"><%= c.name %></td>
+                <td class="table-border"><%= c.email %></td>
+                <td class="table-border"><%= c.phone %></td>
             </tr>
         <% end %>
     </tbody>

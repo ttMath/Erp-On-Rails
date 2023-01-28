@@ -3,6 +3,12 @@ class ClientsController < ApplicationController
     @client = Client.all
   end
 
+  def show
+    @client = Client.find(params[:id])
+    
+  end
+  
+
   def new
     @client = Client.new
     
@@ -29,6 +35,7 @@ class ClientsController < ApplicationController
   def destroy
     @client = Client.find(params[:id])
     @client.destroy
+    redirect_to clients_path, notice: 'aewww, apagou!'
   end
 
   private
