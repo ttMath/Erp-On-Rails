@@ -1,0 +1,18 @@
+<h1>Cadastrar novo cliente</h1>
+
+<%= form_with model: client do |c| %>
+    <div>
+        <%= c.label :Name %><br>
+        <%= c.text_field :name %><br>
+        <%= c.label :Email %><br>
+        <%= c.text_field :email %><br>
+        <%= c.label :Phone %><br>
+        <%= c.text_field :phone %><br>
+        <%= c.label :Address %><br>
+        <%= c.text_field :address %><br>
+    </div>
+    <div>
+        <%= c.submit "Create" %>
+    </div>
+
+<% end %>

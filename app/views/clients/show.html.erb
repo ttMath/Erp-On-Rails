@@ -1,1 +1,6 @@
 <h1>cliente: <%= @client.name %> </h1>
+<%= link_to "Clients", clients_path %>
+<%= link_to "delete", client_path(@client), data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure you want to delete this client? This action will be irreversible."
+                }%>
