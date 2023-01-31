@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag 'clients', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'customers', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<h1>Clients</h1>
+<h1>customers</h1>
 
 <table>
     <thead>
@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        <% @client.each do |c| %>
+        <% @customer.each do |c| %>
             <tr>
                 <td class="table-border"><%= c.id %></td>
                 <td class="table-border"><%= c.name %></td>
@@ -23,4 +23,4 @@
     </tbody>
 </table>
 
-<%= link_to "New Customer", new_client_path %>
+<%= link_to "New Customer", new_customer_path %>

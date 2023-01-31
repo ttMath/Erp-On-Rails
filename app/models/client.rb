@@ -1,3 +1,0 @@
-class Client < ApplicationRecord
-    
-end
