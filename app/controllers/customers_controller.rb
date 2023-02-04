@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @customer = Customer.find(params[:id])
+    @customer = Customer.find_by(id: params[:id])
     
   end
   
@@ -36,7 +36,7 @@ class CustomersController < ApplicationController
     if @customer.update(customer_params)
       redirect_to @customer
     else
-      render :edit, status: :unprocessavle_entity
+      render :edit
     end
   end
 

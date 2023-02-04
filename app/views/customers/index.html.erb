@@ -2,25 +2,19 @@
 
 <h1>customers</h1>
 
-<table>
-    <thead>
-        <tr>
-        <th class="table-border">id</th>
-        <th class="table-border">name</th>
-        <th class="table-border">email</th>
-        <th class="table-border">phone</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @customer.each do |c| %>
-            <tr>
-                <td class="table-border"><%= c.id %></td>
-                <td class="table-border"><%= c.name %></td>
-                <td class="table-border"><%= c.email %></td>
-                <td class="table-border"><%= c.phone %></td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
+
+<% @customer.each do |c| %>
+    <div onclick="window.location.href=('/customers/<%= @customer.ids %>')">
+        <a href="/customers/<%= @customer.ids %>">
+            <%= c.id %><br>
+        </a>
+            <%= c.name %><br>
+            <%= c.email %><br>
+            <%= c.phone %><br>
+        
+    </div>
+<% end %>
+    
+
 
 <%= link_to "New Customer", new_customer_path %>
