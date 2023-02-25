@@ -2,19 +2,19 @@
 
 <h1>customers</h1>
 
+<div>
+<%= link_to "New Customer", new_customer_path %><br>
+</div>
+
 
 <% @customer.each do |c| %>
-    <div onclick="window.location.href=('/customers/<%= @customer.ids %>')">
-        <a href="/customers/<%= @customer.ids %>">
+        <a href="/customers/<%= c.id %>">
             <%= c.id %><br>
+        <%= c.name %><br>
+        <%= c.email %><br>
+        <%= c.phone %><br>
         </a>
-            <%= c.name %><br>
-            <%= c.email %><br>
-            <%= c.phone %><br>
-        
-    </div>
 <% end %>
     
 
 
-<%= link_to "New Customer", new_customer_path %>
