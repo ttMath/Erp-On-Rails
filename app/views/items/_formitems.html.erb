@@ -1,0 +1,12 @@
+<%= form_with model: @item do |i| %>
+    <div>
+        <%= i.label :Name %><br>
+        <%= i.text_field :name %><br>
+        <%= i.label :Stock %><br>
+        <%= i.text_field :stock %><br>
+    </div>
+    <div>
+        <%= i.submit "Submit" %>
+    </div>
+
+<% end %>

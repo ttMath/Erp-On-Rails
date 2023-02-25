@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- recources :items
+ resources :items
  resources :customers
 
 end

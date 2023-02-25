@@ -1,2 +1,10 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1>Item: <%= @item.name %> </h1>
+
+<h1>Stock: <%= @item.stock %> </h1>
+
+<%= link_to "edit", edit_item_path %> <br>
+<%= link_to "delete", item_path(@item), data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure you want to delete this item? This action will be irreversible."
+                }%><br>
+<%= link_to "items", items_path %> <br>
