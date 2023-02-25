@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'homepages/home'
+root 'homepages#home'
  resources :items
  resources :customers
 
