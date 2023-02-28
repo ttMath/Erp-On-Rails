@@ -2,6 +2,8 @@
 
 <h1>Stock: <%= @item.stock %> </h1>
 
+<h2>Price: <%= number_to_currency @item.price %></h2>
+
 <%= link_to "edit", edit_item_path %> <br>
 <%= link_to "delete", item_path(@item), data: {
                 turbo_method: :delete,
