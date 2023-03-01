@@ -1,3 +1,4 @@
 class Sale < ApplicationRecord
   belongs_to :customers
-end
+  has_many :items_sales
+  has_many :items, through: :items_sales
