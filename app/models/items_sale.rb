@@ -1,4 +1,8 @@
 class ItemsSale < ApplicationRecord
-  belongs_to :item
-  belongs_to :sale
+  belongs_to :items
+  belongs_to :sales
+
+
+  attribute :quantity
+  attribute :un_price, :decimal
 end
